@@ -49,6 +49,14 @@ jobs:
         run: |
           pyinstaller --onefile main.py 
 
+      - name: Create dist directory if not exist
+        run: |
+          mkdir -p dist
+          
+      - name: Move Artifact to dist
+        run: |
+          mv final_project.exe dist/
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
