@@ -1,0 +1,609 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 16.2
+-- Dumped by pg_dump version 16.2
+
+-- Started on 2024-05-04 22:16:15
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 4877 (class 0 OID 16658)
+-- Dependencies: 220
+-- Data for Name: characters; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.characters (character_id, character_name) FROM stdin;
+1	Emily Brontë
+2	Emily Brontë
+3	Sherlock Holmes
+4	Arthur Conan Doyle
+5	Sherlock Holmes
+6	Holmes
+7	Watson
+8	Noble
+9	Adventures
+10	Memoirs
+11	de Conan Doyle
+12	J.R.R. Tolkien
+13	Michael Tolkien
+14	Jude Fawley
+15	Arabella Donn
+16	Jude
+17	Sue Bridehead
+18	Phillotson
+19	Phillotson
+20	Jude
+21	Jude
+22	Sue
+23	Jude
+24	Sue
+25	Phillotson
+26	Jude
+27	The Adobe eBook
+\.
+
+
+--
+-- TOC entry 4879 (class 0 OID 16665)
+-- Dependencies: 222
+-- Data for Name: genres; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.genres (genre_id, genre_name) FROM stdin;
+1	novel
+2	pseudonym
+3	families
+4	gentry
+5	moors
+6	relationships
+7	son
+8	novel
+9	fiction
+10	novel
+11	pseudonym
+12	families
+13	gentry
+14	moors
+15	relationships
+16	son
+17	novel
+18	fiction
+19	collection
+20	stories
+21	stories
+22	consulting
+23	detective
+24	issues
+25	stories
+26	sequence
+27	chronology
+28	characters
+29	person
+30	narrative
+31	point
+32	view
+33	Scandal
+34	works
+35	Case
+36	works
+37	A_Case_of_Identity
+38	works
+39	Pips](https://openlibrary.org
+40	Man
+41	Adventure
+42	OL1518317W
+43	Adventure
+44	works
+45	Adventure
+46	works
+47	Adventure
+48	Adventure
+49	Adventure
+50	works
+51	works
+52	works
+53	works
+54	works
+55	works
+56	works
+57	Roverandom
+58	novella
+59	adventures
+60	dog
+61	story
+62	wizard
+63	toy
+64	moon
+65	sea
+66	order
+67	wizard
+68	dog
+69	author
+70	son
+71	loss
+72	toy
+73	dog
+74	work
+75	tone
+76	children
+77	story
+78	allusions
+79	references
+80	manner
+81	point
+82	embarks
+83	journey
+84	love
+85	people
+86	date
+87	relationships
+88	hope
+89	connection
+90	people
+91	decades
+92	people
+93	today
+94	options
+95	point
+96	history
+97	technology
+98	abilities
+99	options
+100	people
+101	work
+102	fiction
+103	lives
+104	individuals
+105	forces
+106	control
+107	villager
+108	divinity
+109	school
+110	country
+111	girl
+112	living
+113	stonemason
+114	love
+115	cousin
+116	sense
+117	obligation
+118	schoolmaster
+119	children
+120	wedlock
+121	poverty
+122	weight
+123	society
+124	disapproval
+125	toll
+126	climax
+127	son
+128	children
+129	penance
+130	church
+131	Jude
+132	novel
+133	frankness
+134	public
+135	criticisms
+136	marriage
+137	university
+138	system
+139	church
+140	reception
+141	fiction
+142	poetry
+143	book
+144	text
+145	images
+146	contents
+147	page
+148	chapter
+149	headings
+150	navigation
+151	bookmarks
+152	chapter
+153	headings
+154	copies
+155	year
+156	versions
+157	text
+\.
+
+
+--
+-- TOC entry 4881 (class 0 OID 16839)
+-- Dependencies: 224
+-- Data for Name: plots; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.plots (plot_id, plot_description) FROM stdin;
+1	Wuthering
+2	published
+3	concerns
+4	landed
+5	living
+6	adopted
+7	influenced
+8	Wuthering
+9	published
+10	concerns
+11	landed
+12	living
+13	adopted
+14	influenced
+15	published
+16	contains
+17	featuring
+18	published
+19	collected
+20	supported
+21	related
+22	Contains
+23	works
+24	works
+25	works
+26	works
+27	works
+28	contained
+29	works
+30	completas
+31	works
+32	written
+33	told
+34	deals
+35	turns
+36	goes
+37	find
+38	turn
+39	wrote
+40	amuse
+41	contains
+42	find
+43	meet
+44	get
+45	finding
+46	share
+47	seems
+48	’s
+49	have
+50	connect
+51	sort
+52	frustrated
+53	depicting
+54	trapped
+55	wants
+56	enter
+57	Sidetracked
+58	pretends
+59	marries
+60	earns
+61	falls
+62	marries
+63	helped
+64	bear
+65	living
+66	returns
+67	live
+68	bears
+69	begin
+70	take
+71	occurs
+72	hangs
+73	returns
+74	returns
+75	dies
+76	shocked
+77	did
+78	wrote
+79	concentrating
+80	Note
+81	read
+82	scanned
+83	decipher
+84	has
+85	linked
+86	has
+\.
+
+
+--
+-- TOC entry 4875 (class 0 OID 16651)
+-- Dependencies: 218
+-- Data for Name: settings; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.settings (setting_id, setting_name) FROM stdin;
+1	novel
+2	pseudonym
+3	families
+4	gentry
+5	moors
+6	relationships
+7	son
+8	novel
+9	fiction
+10	novel
+11	pseudonym
+12	families
+13	gentry
+14	moors
+15	relationships
+16	son
+17	novel
+18	fiction
+19	collection
+20	stories
+21	stories
+22	consulting
+23	detective
+24	issues
+25	stories
+26	sequence
+27	chronology
+28	characters
+29	person
+30	narrative
+31	point
+32	view
+33	Scandal
+34	works
+35	Case
+36	works
+37	A_Case_of_Identity
+38	works
+39	Pips](https://openlibrary.org
+40	Man
+41	Adventure
+42	OL1518317W
+43	Adventure
+44	works
+45	Adventure
+46	works
+47	Adventure
+48	Adventure
+49	Adventure
+50	works
+51	works
+52	works
+53	works
+54	works
+55	works
+56	works
+57	Roverandom
+58	novella
+59	adventures
+60	dog
+61	story
+62	wizard
+63	toy
+64	moon
+65	sea
+66	order
+67	wizard
+68	dog
+69	author
+70	son
+71	loss
+72	toy
+73	dog
+74	work
+75	tone
+76	children
+77	story
+78	allusions
+79	references
+80	manner
+81	point
+82	embarks
+83	journey
+84	love
+85	people
+86	date
+87	relationships
+88	hope
+89	connection
+90	people
+91	decades
+92	people
+93	today
+94	options
+95	point
+96	history
+97	technology
+98	abilities
+99	options
+100	people
+101	work
+102	fiction
+103	lives
+104	individuals
+105	forces
+106	control
+107	villager
+108	divinity
+109	school
+110	country
+111	girl
+112	living
+113	stonemason
+114	love
+115	cousin
+116	sense
+117	obligation
+118	schoolmaster
+119	children
+120	wedlock
+121	poverty
+122	weight
+123	society
+124	disapproval
+125	toll
+126	climax
+127	son
+128	children
+129	penance
+130	church
+131	Jude
+132	novel
+133	frankness
+134	public
+135	criticisms
+136	marriage
+137	university
+138	system
+139	church
+140	reception
+141	fiction
+142	poetry
+143	book
+144	text
+145	images
+146	contents
+147	page
+148	chapter
+149	headings
+150	navigation
+151	bookmarks
+152	chapter
+153	headings
+154	copies
+155	year
+156	versions
+157	text
+\.
+
+
+--
+-- TOC entry 4883 (class 0 OID 16846)
+-- Dependencies: 226
+-- Data for Name: stories; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.stories (story_id, description, genre_id, setting_id, main_characters, plot_id) FROM stdin;
+1	\N	\N	\N	\N	\N
+2	\N	\N	\N	\N	\N
+3	\N	\N	\N	\N	\N
+4	\N	\N	\N	\N	\N
+5	\N	\N	\N	\N	\N
+6	\N	\N	\N	\N	\N
+7	\N	\N	\N	\N	\N
+8	\N	\N	\N	\N	\N
+9	Wuthering Heights is an 1847 novel by Emily Brontë, initially published under the pseudonym Ellis Bell. It concerns two families of the landed gentry living on the West Yorkshire moors, the Earnshaws and the Lintons, and their turbulent relationships with Earnshaw's adopted son, Heathcliff. The novel was influenced by Romanticism and Gothic fiction.	\N	\N	\N	\N
+10	Wuthering Heights is an 1847 novel by Emily Brontë, initially published under the pseudonym Ellis Bell. It concerns two families of the landed gentry living on the West Yorkshire moors, the Earnshaws and the Lintons, and their turbulent relationships with Earnshaw's adopted son, Heathcliff. The novel was influenced by Romanticism and Gothic fiction.	\N	\N	\N	\N
+11	The Adventures of Sherlock Holmes is a collection of twelve short stories by Arthur Conan Doyle, first published on 14 October 1892. It contains the earliest short stories featuring the consulting detective Sherlock Holmes, which had been published in twelve monthly issues of The Strand Magazine from July 1891 to June 1892. The stories are collected in the same sequence, which is not supported by any fictional chronology. The only characters common to all twelve are Holmes and Dr. Watson and all are related in first-person narrative from Watson's point of view.\r\n\r\n\r\nContains:\r\n[Scandal in Bohemia](https://openlibrary.org/works/OL14930611W/A_Scandal_in_Bohemia)\r\n[Red-headed League](https://openlibrary.org/works/OL14930336W/The_Red-Headed_League)\r\n[Case of Identity](https://openlibrary.org/works/OL14929939W/A_Case_of_Identity)\r\n[Boscombe Valley Mystery](https://openlibrary.org/works/OL18495288W/The_Boscombe_Valley_Mystery)\r\n[Five Orange Pips](https://openlibrary.org/works/OL1518120W/Five_Orange_Pips)\r\n[Man with the Twisted Lip](https://openlibrary.org/works/OL14930258W/The_Man_With_the_Twisted_Lip)\r\n[Adventure of the Blue Carbuncle](https://openlibrary.org/works/OL1518317W/Adventure_of_the_Blue_Carbuncle)\r\n[Adventure of the Speckled Band](https://openlibrary.org/works/OL262561W/Adventure_of_the_Speckled_Band)\r\n[Adventure of the Engineer's Thumb](https://openlibrary.org/works/OL1518318W/Adventure_of_the_Engineer's_Thumb)\r\n[Adventure of the Noble Bachelor](https://openlibrary.org/works/OL14929841W/Adventure_of_the_Noble_Bachelor)\r\n[Adventure of the Beryl Coronet](https://openlibrary.org/works/OL14929825W/Adventure_of_the_Beryl_Coronet)\r\n[Adventure of the Copper Beeches](https://openlibrary.org/works/OL1518116W/Adventure_of_the_Copper_Beeches)\r\n\r\n\r\n----------\r\nAlso contained in:\r\n\r\n - [Adventures and Memoirs of Sherlock Holmes](https://openlibrary.org/works/OL1518128W)\r\n - [Adventures of Sherlock Holmes](https://openlibrary.org/works/OL20624138W)\r\n - [Celebrated Cases of Sherlock Holmes](https://openlibrary.org/works/OL16076930W)\r\n - [Complete Sherlock Holmes](https://openlibrary.org/works/OL18188824W)\r\n - [Complete Sherlock Holmes: Volume I](https://openlibrary.org/works/OL14929975W)\r\n - [Illustrated Sherlock Holmes](https://openlibrary.org/works/OL1518342W)\r\n - [Obras completas de Conan Doyle: II](https://openlibrary.org/works/OL20787319W)\r\n - [Original Illustrated Sherlock Holmes](https://openlibrary.org/works/OL262528W)\r\n - [Original Illustrated 'Strand' Sherlock Holmes](https://openlibrary.org/works/OL262529W)\r\n - [Short Stories](https://openlibrary.org/works/OL18188661W)\r\n - [Works](https://openlibrary.org/works/OL16173818W)\r\n - [Works](https://openlibrary.org/works/OL14930383W)	\N	\N	\N	\N
+12		\N	\N	\N	\N
+13	Roverandom is a novella written by J.R.R. Tolkien, originally told in 1925. It deals with the adventures of a young dog, Rover. In the story, an irritable wizard turns Rover into a toy, and Rover goes to the moon and under the sea in order to find the wizard again to turn him back into a normal-sized dog. The author wrote Roverandom for his son Michael Tolkien to amuse him upon the loss of his favorite toy — a little leaden dog. The work is in tone a children's story, but contains many allusions and references in the manner of "Farmer Giles of Ham".	\N	\N	\N	\N
+14	From NYU Wagner: \r\n\r\nAt some point, every one of us embarks on a journey to find love. We meet people, date, get into and out of relationships, all with the hope of finding someone with whom we share a deep connection. This seems standard now, but it’s wildly different from what people did even just decades ago. Single people today have more romantic options than at any point in human history. With technology, our abilities to connect with and sort through these options are staggering. So why are so many people frustrated?	\N	\N	\N	\N
+15		\N	\N	\N	\N
+16	Hardy's last work of fiction, Jude the Obscure is also one of his most gloomily fatalistic, depicting the lives of individuals who are trapped by forces beyond their control. Jude Fawley, a poor villager, wants to enter the divinity school at Christminster. Sidetracked by Arabella Donn, an earthy country girl who pretends to be pregnant by him, Jude marries her and is then deserted. He earns a living as a stonemason at Christminster; there he falls in love with his independent-minded cousin, Sue Bridehead. Out of a sense of obligation, Sue marries the schoolmaster Phillotson, who has helped her. Unable to bear living with Phillotson, she returns to live with Jude and eventually bears his children out of wedlock. Their poverty and the weight of society's disapproval begin to take a toll on Sue and Jude; the climax occurs when Jude's son by Arabella hangs Sue and Jude's children and himself. In penance, Sue returns to Phillotson and the church. Jude returns to Arabella and eventually dies miserably. The novel's sexual frankness shocked the public, as did Hardy's criticisms of marriage, the university system, and the church. Hardy was so distressed by its reception that he wrote no more fiction, concentrating solely on his poetry.Please Note:  This book is easy to read in true text, not scanned images that can sometimes be difficult to decipher.  The Microsoft eBook has a contents page linked to the chapter headings for easy navigation. The Adobe eBook has bookmarks at chapter headings and is printable up to two full copies per year.  Both versions are text searchable.	\N	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4873 (class 0 OID 16644)
+-- Dependencies: 216
+-- Data for Name: subjects; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.subjects (subject_id, subject) FROM stdin;
+1	love
+2	love
+3	fun
+4	love
+5	love
+6	love
+7	love
+8	love
+9	love
+10	love
+11	love
+12	fun
+13	fun
+14	love
+15	adventure
+16	mystery
+17	innovation
+18	music
+19	harmony
+20	discovery
+21	transformation
+22	diversity
+23	creativity
+24	exploration
+25	serenity
+26	conflict
+\.
+
+
+--
+-- TOC entry 4889 (class 0 OID 0)
+-- Dependencies: 219
+-- Name: characters_character_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.characters_character_id_seq', 27, true);
+
+
+--
+-- TOC entry 4890 (class 0 OID 0)
+-- Dependencies: 221
+-- Name: genres_genre_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.genres_genre_id_seq', 157, true);
+
+
+--
+-- TOC entry 4891 (class 0 OID 0)
+-- Dependencies: 223
+-- Name: plots_plot_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.plots_plot_id_seq', 86, true);
+
+
+--
+-- TOC entry 4892 (class 0 OID 0)
+-- Dependencies: 217
+-- Name: settings_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.settings_setting_id_seq', 157, true);
+
+
+--
+-- TOC entry 4893 (class 0 OID 0)
+-- Dependencies: 225
+-- Name: stories_story_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.stories_story_id_seq', 16, true);
+
+
+--
+-- TOC entry 4894 (class 0 OID 0)
+-- Dependencies: 215
+-- Name: subjects_subject_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.subjects_subject_id_seq', 26, true);
+
+
+-- Completed on 2024-05-04 22:16:15
+
+--
+-- PostgreSQL database dump complete
+--
+

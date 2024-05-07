@@ -1,0 +1,9 @@
+- # connect to the db 
+- # accept input text for a subject
+- # insert the subject word into the db
+- # use the subject keyword to request to OpenLibrary Subject API for related works
+- # retrieve and parse the descriptions for each subject
+- # process the description for the relevant keywords
+- # insert the processed keywords into the db
+- # insert description into the db
+- # close the db connection
