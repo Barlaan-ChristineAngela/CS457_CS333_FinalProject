@@ -47,12 +47,12 @@ jobs:
 
       - name: Build Application
         run: |
-          pyinstaller --onefile main.py 
+          python -m PyInstaller main.spec
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: main
+          name: final_project_executable
           path: dist/main.exe
 
   release:
@@ -64,7 +64,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v2
         with:
-          name: main
+          name: final_project_executable
 
       - name: Create Release
         id: create_release
