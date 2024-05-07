@@ -53,7 +53,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: final_project_executable
-          path: dist/final_project.exe
+          path: dist/main.exe
 
   release:
     needs: build
@@ -64,7 +64,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v2
         with:
-          name: executable
+          name: final_project_executable
 
       - name: Create Release
         id: create_release
