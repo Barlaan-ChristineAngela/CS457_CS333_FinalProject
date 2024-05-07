@@ -44,9 +44,9 @@ jobs:
         run: |
           pip install pyinstaller
 
-      - name: Run setup.py
+      - name: Run setup.cfg
         run: |
-          python setup.py sdist bdist_wheel
+          python setup.cfg install
 
       - name: Build Application
         run: |
