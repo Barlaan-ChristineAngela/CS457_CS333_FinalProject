@@ -72,8 +72,10 @@ jobs:
         with:
           tag_name: v1.0
           release_name: Release v1.0
+          draft: false
+          prerelease: false
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.NEW_TOKEN }}
 
       - name: Upload Release Asset
         id: upload-release-asset
@@ -84,4 +86,4 @@ jobs:
           asset_name: final_project.exe
           asset_content_type: application/octet-stream
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.NEW_TOKEN }}
