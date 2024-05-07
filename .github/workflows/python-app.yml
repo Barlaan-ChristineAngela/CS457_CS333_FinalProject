@@ -52,7 +52,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: executable
+          name: final_project_executable
           path: dist/final_project.exe
 
   release:
