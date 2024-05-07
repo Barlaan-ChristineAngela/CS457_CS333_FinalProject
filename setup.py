@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='my_package',
+    name='your-package',
     version='1.0',
-    packages=find_packages() + ['thinc.tests.mypy.configs'],
+    packages=find_packages(exclude=['tests', 'tests.*']) + ['thinc'],
 )
