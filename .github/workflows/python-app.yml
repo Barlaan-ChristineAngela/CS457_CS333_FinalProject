@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install flake8 pytest psycopg2 requests spacy thinc; fi
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install flake8 pytest psycopg2 requests; fi
 
       - name: Lint with Ruff
         run: |
@@ -43,10 +43,6 @@ jobs:
       - name: Install PyInstaller
         run: |
           pip install pyinstaller
-
-      - name: Run setup.cfg
-        run: |
-          python setup.cfg install
 
       - name: Build Application
         run: |
