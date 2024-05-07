@@ -69,8 +69,9 @@ jobs:
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
-        with:
+        env:
           GITHUB_TOKEN: ${{ secrets.CS333_PROJECT}}
+        with:
           tag_name: v1.0
           release_name: Release v1.0
           draft: false
