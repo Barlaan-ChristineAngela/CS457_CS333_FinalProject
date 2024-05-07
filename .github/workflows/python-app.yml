@@ -47,7 +47,7 @@ jobs:
 
       - name: Build Application
         run: |
-          python -m PyInstaller main.spec
+          python -m PyInstaller main.py
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
