@@ -1,6 +1,7 @@
 from db_connection import DatabaseConnection
 from subjects_request import SubjectsRequest
 from works_request import WorksRequest
+from text_processing import TextProcessing
 from user import User
 
 
@@ -37,18 +38,19 @@ def main():
         work_description = new_works_request.get_work_description(work_id)
         database.insert_description_from_API(work_description)
 
-        # process the text
+        # process the text via SpaCy for relevant keywords
+        processing = TextProcessing()
 
-        setting_keywords = "USA"
+        setting_keywords = processing.get_settings(work_description)
         print("Settings:", setting_keywords)
 
-        character_keywords = "Pompompurin"
+        character_keywords = processing.get_characters(work_description)
         print("Characters:", character_keywords)
 
-        genre_keywords = "adventure"
+        genre_keywords = processing.get_genres(work_description)
         print("Genres:", genre_keywords)
 
-        plot_keywords = "mystery"
+        plot_keywords = processing.get_plots(work_description)
         print("Plots:", plot_keywords)
 
         # insert the newly processed keywords into the db
