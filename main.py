@@ -13,6 +13,7 @@ def main():
     database.connect()
 
     # output to CLI for user instruction
+    print("This is a change to the program")
     print("Welcome to the Story Keyword Generator!")
     print("This program analyzes text from story summaries.")
     # ask the user to make a selection
